@@ -1073,7 +1073,7 @@ textarea {
 /*  2.3 buttons
 /*----------------------------------------*/
 .rs-btn {
-  color: var(--rs-common-white);
+  color: var(--rs-common-black);
   font-family: var(--rs-ff-heading);
   font-size: 16px;
   font-style: normal;
@@ -1094,7 +1094,7 @@ textarea {
   position: relative;
   overflow: hidden;
   padding: 20px 30px;
-  background-color: var(--rs-theme-primary);
+  background-color:#ffff;
   z-index: 5;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
@@ -1300,7 +1300,9 @@ textarea {
 /*  offcanvas
 /*----------------------------------------*/
 .offcanvas__area {
-  background: #0E0A24 none repeat scroll 0 0;
+  box-shadow: 0px 0px 10px 0px rgba(93.75, 91.10054347826089, 91.10054347826089, 0.5);
+
+  background: #fff none repeat scroll 0 0;
   position: fixed;
   right: 0;
   top: 0;
@@ -1417,7 +1419,7 @@ textarea {
   color: var(--rs-theme-primary);
 }
 .offcanvas__title {
-  color: var(--rs-common-white);
+  color: var(--rs-common-black);
 }
 @media (max-width:450px) {
   .offcanvas__title {
@@ -1437,7 +1439,7 @@ textarea {
   margin-right: 5px;
 }
 .offcanvas__social ul li a {
-  color: var(--rs-theme-primary);
+  color: #fff;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -1449,7 +1451,7 @@ textarea {
           justify-content: center;
   width: 36px;
   height: 36px;
-  background: var(--rs-common-white);
+  background: var(--rs-common-black);
   font-size: 16px;
   border-radius: 50%;
 }
@@ -4582,7 +4584,7 @@ body .ui-tooltip {
   display: block !important;
 }
 .header-1.rs-sticky .main-menu ul li > a {
-  color: var(--rs-common-white);
+  color: var(--rs-common-black);
 }
 .header-1.rs-sticky .main-menu ul li > a::before {
   background: var(--rs-theme-primary);
@@ -4862,8 +4864,10 @@ body .ui-tooltip {
   width: 100%;
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-  background: var(--rs-gray-900);
+  background: #fff;
   border-top: 0;
+  box-shadow: 0px 0px 10px 0px rgba(93.75, 91.10054347826089, 91.10054347826089, 0.5);
+
 }
 .rs-sticky.header-2 {
   border-bottom: none;
@@ -4878,7 +4882,7 @@ body .ui-tooltip {
   width: 100%;
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-  background: var(--rs-gray-900);
+  background:#fff;
   border-top: 0;
 }
 
@@ -6554,15 +6558,15 @@ body .ui-tooltip {
   top: 110%;
   inset-inline-start: 0;
   min-width: 280px;
-  background: #0d0d0d;
+  box-shadow: 0px 0px 10px 0px rgba(93.75, 91.10054347826089, 91.10054347826089, 0.5);
+  background: #fff;
   z-index: 99;
   visibility: hidden;
   opacity: 0;
   -webkit-transform-origin: top center;
-          transform-origin: top center;
+  transform-origin: top center;
   padding: 35px 0 6px;
   color: var(--rs-common-white);
-  border: 1px solid var(--rs-border-primary);
 }
 .main-menu ul li .submenu li {
   display: block;
@@ -7016,8 +7020,8 @@ body .ui-tooltip {
   text-transform: capitalize;
   width: 100%;
   padding: 10px 0;
-  color: var(--rs-common-white);
-  border-top: 1px solid rgba(255, 255, 255, 0.079);
+  color: var(--rs-common-black);
+  border-bottom: 1px solid #2F394E!important;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
