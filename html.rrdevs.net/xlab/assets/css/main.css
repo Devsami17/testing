@@ -185,8 +185,9 @@ h6 {
   --rs-shadow-l: #fff;
   --rs-shadow-m: #fff;
   --rs-shadow-s: #fff;
-  --rs-border-primary: #2F394E;
-  --rs-border-secondary: #2F394E;
+  --rs-border-primary: orangered;
+  --rs-border-secondary: orangered;
+  ;
   /**
   @font weight declaration
   */
@@ -247,7 +248,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.fa-arrow-right{
+  color: orangered;
+}
 h1, .h1 h2,
 .h2,
 h3, .h3,
@@ -781,8 +784,8 @@ textarea {
 	1.8 spacing
 ---------------------------------*/
 .section-space {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-space {
@@ -812,7 +815,7 @@ textarea {
 }
 
 .section-space-bottom {
-  padding-bottom: 120px;
+  padding-bottom: 60px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-space-bottom {
@@ -1549,7 +1552,7 @@ textarea {
 
 .offcanvas-close-icon {
   line-height: 1;
-  color: var(--rs-common-white);
+  color: var(--rs-common-black);
 }
 .offcanvas-close-icon .offcanvas-m-lines {
   position: relative;
@@ -1932,7 +1935,7 @@ textarea {
   --rs-text-primary: rgba(6, 6, 6, 1);
   --rs-text-secondary: rgba(255, 255, 255, 1);
   --rs-text-body: rgb(81, 82, 84);
-  --rs-border-primary: rgba(6, 6, 6, 0.1);
+  --rs-border-primary: orangered;
   --rs-bg-2: rgba(249, 249, 249, 1);
   --rs-bg-5: rgb(243, 243, 243);
 }
@@ -5424,7 +5427,7 @@ body .ui-tooltip {
   color: var(--rs-common-white);
 }
 .banner-1__content h1 span {
-  color: var(--rs-theme-primary);
+  color: orangered;
 }
 .banner-1__content p {
   color: var(--rs-common-white);
@@ -8183,7 +8186,7 @@ body .ui-tooltip {
   text-transform: capitalize;
   color: var(--rs-common-black);
   font-family: var(--rs-ff-heading);
-  border-bottom: 1px solid var(--rs-theme-primary);
+  border-bottom: 1px solid orangered;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .footer__widget-title h4 {
@@ -9028,10 +9031,11 @@ body .ui-tooltip {
 .feedback__item__home:after {
   width: 100%;
   background-position: bottom;
-  height: 12px;
+  height: 4px;
   z-index: -1;
+background-color: orangered;
   background-repeat: no-repeat;
-  background-image: url(../imgs/team/border-bottom.png);
+  /* background-image: url(../imgs/team/border-bottom.png); */
   position: absolute;
   content: "";
   background-size: cover;
@@ -9053,9 +9057,9 @@ body .ui-tooltip {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
-.feedback__item:hover {
-  border-color: #2F394E !important;
-}
+/* .feedback__item:hover {
+  border-color: orangered !important;
+} */
 .feedback__item-qoute {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10879,8 +10883,7 @@ body .ui-tooltip {
   max-width: 611px;
 }
 .back-layer{
-
-border: 2px solid grey;
+border-radius: 10px;
   background-color: #fff;
   position: absolute;
   width: 100%;
