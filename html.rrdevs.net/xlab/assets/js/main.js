@@ -664,3 +664,83 @@
 })(jQuery);
 
 
+
+let projectsData = [
+    { category: 'Website', img: './assets/imgs/portfolio/project_1_web.png' },
+    { category: 'Website', img: './assets/imgs/portfolio/project_2_web.png' },
+    { category: 'Website', img: './assets/imgs/portfolio/project_3_web.png' },
+    { category: 'Website', img: './assets/imgs/portfolio/project_4_web.png' },
+    { category: 'Website', img: './assets/imgs/portfolio/project_5_web.png' },
+    { category: 'Website', img: './assets/imgs/portfolio/project_6_web.png' },
+    { category: 'Website', img: './assets/imgs/portfolio/project_7_web.png' },
+    { category: 'Website', img: './assets/imgs/portfolio/project_8_web.png' },
+    { category: 'Website', img: './assets/imgs/portfolio/project_9_web.png' },
+    { category: 'logo', img: './assets/imgs/portfolio/project_1_logo.png' },
+    { category: 'logo', img: './assets/imgs/portfolio/project_2_logo.png' },
+    { category: 'logo', img: './assets/imgs/portfolio/project_3_logo.png' },
+    { category: 'logo', img: './assets/imgs/portfolio/project_4_logo.png' },
+    { category: 'logo', img: './assets/imgs/portfolio/project_5_logo.png' },
+    { category: 'logo', img: './assets/imgs/portfolio/project_6_logo.png' },
+    { category: 'logo', img: './assets/imgs/portfolio/project_7_logo.png' },
+    { category: 'logo', img: './assets/imgs/portfolio/project_8_logo.png' },
+    { category: 'logo', img: './assets/imgs/portfolio/project_9_logo.png' },
+    { category: 'app', img: './assets/imgs/portfolio/project_1_app.png' },
+    { category: 'app', img: './assets/imgs/portfolio/project_2_app.png' },
+    { category: 'app', img: './assets/imgs/portfolio/project_3_app.png' },
+    { category: 'app', img: './assets/imgs/portfolio/project_4_app.png' },
+    { category: 'app', img: './assets/imgs/portfolio/project_5_app.png' },
+    { category: 'app', img: './assets/imgs/portfolio/project_6_app.png' },
+    { category: 'app', img: './assets/imgs/portfolio/project_7_app.png' },
+    { category: 'app', img: './assets/imgs/portfolio/project_8_app.png' },
+    { category: 'app', img: './assets/imgs/portfolio/project_9_app.png' },
+    { category: 'Ecommerce', img: './assets/imgs/portfolio/project_1_ecommerce.png' },
+    { category: 'Ecommerce', img: './assets/imgs/portfolio/project_2_ecommerce.png' },
+    { category: 'Ecommerce', img: './assets/imgs/portfolio/project_3_ecommerce.png' },
+    { category: 'Ecommerce', img: './assets/imgs/portfolio/project_4_ecommerce.png' },
+    { category: 'Ecommerce', img: './assets/imgs/portfolio/project_5_ecommerce.png' },
+    { category: 'Ecommerce', img: './assets/imgs/portfolio/project_6_ecommerce.png' },
+    { category: 'Ecommerce', img: './assets/imgs/portfolio/project_7_ecommerce.png' },
+    { category: 'Ecommerce', img: './assets/imgs/portfolio/project_8_ecommerce.png' },
+    { category: 'Ecommerce', img: './assets/imgs/portfolio/project_9_ecommerce.png' },
+    { category: 'Illustration', img: './assets/imgs/portfolio/project_1_illustration.png' },
+    { category: 'Illustration', img: './assets/imgs/portfolio/project_2_illustration.png' },
+    { category: 'Illustration', img: './assets/imgs/portfolio/project_3_illustration.png' },
+    { category: 'Illustration', img: './assets/imgs/portfolio/project_4_illustration.png' },
+    { category: 'Illustration', img: './assets/imgs/portfolio/project_5_illustration.png' },
+    { category: 'Illustration', img: './assets/imgs/portfolio/project_6_illustration.png' },
+    { category: 'Illustration', img: './assets/imgs/portfolio/project_7_illustration.png' },
+    { category: 'Illustration', img: './assets/imgs/portfolio/project_8_illustration.png' },
+    { category: 'Illustration', img: './assets/imgs/portfolio/project_9_illustration.png' },
+];
+
+var mainBox = document.getElementById("projects_images");
+
+function showprojects(searchitem) {
+    let temparray = projectsData.filter(data => data.category === searchitem);
+    mainBox.innerHTML = "";
+    for (var i = 0; i < temparray.length; i++) {
+        mainBox.innerHTML += `<div class="col-lg-4 col-xl-4 col-md-6 col-sm-12 col-12">
+<a href="${temparray[i].img}"><img src="${temparray[i].img}" alt=""></a>
+</div>`;
+    }
+}
+
+function setActive(event) {
+    // Remove the active class from all list items
+    let items = document.querySelectorAll('.latest-portfolio_section_inner ul li');
+    items.forEach(item => item.classList.remove('active_project_li'));
+
+    // Add the active class to the clicked item
+    event.target.classList.add('active_project_li');
+}
+
+// Show 'Website' projects by default on page load
+window.onload = function() {
+    showprojects('Website');
+
+    // Set the initial active class
+    let initialActiveItem = document.querySelector('.latest-portfolio_section_inner ul li');
+    if (initialActiveItem) {
+        initialActiveItem.classList.add('active_project_li');
+    }
+};
