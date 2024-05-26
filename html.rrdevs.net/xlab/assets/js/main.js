@@ -744,3 +744,16 @@ window.onload = function() {
         initialActiveItem.classList.add('active_project_li');
     }
 };
+
+document.querySelectorAll(".accordion-item").forEach((item) => {
+    item.querySelector(".accordion-item-header").addEventListener("click", () => {
+      item.classList.toggle("open");
+    });
+  });
+  
+
+
+  var a = document.getElementById('hiring');
+  function hire(value){
+    a.value = value;
+  }
