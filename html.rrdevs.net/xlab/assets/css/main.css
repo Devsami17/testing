@@ -11518,30 +11518,17 @@ border-radius: 8px;
   .hire-us-two{
     box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.2);
     margin: 20px 5px;
+    margin-top: 50px;
     border-radius: 8px 8px 8px 8px;
   }
-}
-.accordion {
-  margin:auto;
-  display: flex;
-  flex-direction: column;
-  
-  width: 100%;
 }
 
 
 
 @media only screen and (min-width:300px) and (max-width:420px){
-  /* .accordion{
-    max-width: 260px;
-  } */
-  .accordion-item-header-title{
-    font-size: 13px  !important;
-  }
-  .accordion-item-header-title2{
-    font-size: 11px  !important;
-  }
-  .accordion-item-header img{
+
+
+  .item-header_img{
     height: 50px !important;
     position: relative;
     top: -10px;
@@ -11593,9 +11580,7 @@ font-size: 13px !important;}
     border-color: #fff;
     text-align: center;
 }
-.accordion-item-header img{
-  height: 80px;
-}
+
 .hire-end_2{
   height: 44px;
   width: 120px !important;
@@ -11611,17 +11596,34 @@ font-size: 13px !important;}
   border-radius: 0px;
   border-radius: 50px;
 }
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100%;
+}
+
 .accordion .accordion-item {
-  background-color: #FBFDFE;
-  padding: 10px 10px 0px 0px;
-  margin-bottom: 12px;
-  border: 1px solid #d4d4d4;
+  background-color: #FBFDFE !important;
+  /* border: 1px solid #d4d4d4; */
+  border-radius: 2px;
 }
-.accordion-item-header-title{
-  font-size: 19px;
+.accordion-item h3{
+  font-size: 16px;
+  font-weight: 700  ;
+  line-height: 16px;
 }
-.accordion-item-header-title2 {
-  font-size: 14px;
+.accordion-item p{
+  font-size: 12px;
+  line-height: 16px;
+
+  font-weight: 200;
+  color:#808080;
+}
+.accordion-item-header div:nth-child(2){
+  position: relative;
+  top: 10px;
 }
 .accordion .accordion-item .accordion-item-description-wrapper hr {
   border: none;
@@ -11637,11 +11639,14 @@ font-size: 13px !important;}
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0px 5px 0px 10px;
   cursor: pointer;
-  
-}
 
+}
+.accordion-item-image{
+  height:29px;
+  width:27px;
+}
 .accordion .accordion-item .accordion-item-header .accordion-item-header-title {
   font-weight: 600;
 }
@@ -11673,8 +11678,78 @@ font-size: 13px !important;}
   .accordion-item-description-wrapper
   .accordion-item-description {
   min-height: 0;
+  background-color: #fff;
+  padding: 0px 20px;
+  border-top: 1px solid #ccc;
 }
+.accordion-single-box{
+  display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+    margin: 15px 15px 15px 15px;
+    --e-column-margin-right: 15px;
+    --e-column-margin-left: 15px;
+    padding: 20px 0px 20px 0px;
+  }
+  .accordion-single-box:hover{
+    background-color: #0583d8;
+  }
+ .accordion-single-box_1 , .accordion-single-box_3{
+  border-right: 1px solid #ccc;
+ }
 
+.accordion-single-box img{
+  width: 40px;
+  height: 60px;
+  object-fit: contain;
+}
+.accordion-single-box h4{
+  width: 170px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  font-family: 'Raleway';
+}
+@media only screen and (min-width:300px) and (max-width:510px){
+  .accordion-item h3{
+    font-size: 13px;
+  }
+  .accordion-item p{
+    font-size: 10px;
+  }
+  .accordion .accordion-item .accordion-item-description-wrapper .accordion-item-description {
+    padding: 0px 0px;
+  }
+  .accordion-single-box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+    margin: 15px 0px 15px 0px;
+    --e-column-margin-right: 15px;
+    --e-column-margin-left: 15px;
+    padding: 20px 0px 20px 0px;
+  }
+  /* .accordion-single-box_1{
+   width: 55%;
+  } */
+  .accordion-single-box{
+    width: 55%;
+  }
+  .accordion-single-box h4{
+    font-size: 10px;
+    width: fit-content;
+  }
+  .accordion-single-box img {
+    width: 35px;
+    height: 45px;
+}
+}
 .accordion
   .accordion-item
   .accordion-item-description-wrapper
@@ -11683,36 +11758,11 @@ font-size: 13px !important;}
   padding: 10px;
   line-height: 1.5;
 }
-/* .hire-us-boxes-main{
-  padding: 15px 20px;
-} */
 
-.hire-us-single-box{
-  cursor: pointer !important;
-  margin: 0px 0px 0px 0px;
-  padding: 15px 0px 15px 0px;
+
+.accordion-single-box:hover h4{
+  color: #fff;
 }
-.hire-us-single-box h6{
-  font-weight: 400;
-  font-size: 16px;
-}
-.line-boxes{
-  width: 1.2px;
-  background-color: #ccc;
-}
- /* .hire-us-single-box:nth-child(1){
-  border-right: 1px solid rgb(204, 204, 204);
-  padding: 14px 90px 15px 0px;
-
-}.hire-us-single-box_3{
-  border-right: 1px solid rgb(204, 204, 204);
-  padding: 14px 90px 15px 0px;
-} */
- .hire-us-single-box img{
-  margin-left: 8px;
-}  
-
-
 .latest-service-2__item:hover .latest-service-2__item-media img {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
